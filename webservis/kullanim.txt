@@ -1,0 +1,38 @@
+** Kelime eklemek için POST metodu kullanınız **
+POST /muhendislik/webservis/index.php HTTP/1.1
+Host: coinerbtc.com
+Content-Type: application/x-www-form-urlencoded
+Cache-Control: no-cache
+
+kelime=Kelimeniz&anlami=Anlaminiz
+
+** Kelime silmek için DELETE metodu kullanınız **
+DELETE /muhendislik/webservis/index.php?pid=489 HTTP/1.1
+Host: coinerbtc.com
+Content-Type: application/json
+
+{
+"pid" : 486
+}
+
+Silmek istediğiniz pid değerini json formatında giriniz.
+
+** Kelime güncellemek için PUT metodu kullanınız **
+PUT /muhendislik/webservis/index.php HTTP/1.1
+Host: coinerbtc.com
+Content-Type: application/json
+
+{
+	"pid" : pidIdNo,
+	"kelime" : "yeniKelime",
+	"anlami" : "yeniAnlam"
+}
+
+Güncellemek istediğiniz kelimenin pid,kelime,anlami değerlerini json formatında giriniz.
+
+** Kelime listelemek için GET metodu kullanınız **
+GET /muhendislik/webservis/index.php?pid=19 HTTP/1.1
+Host: coinerbtc.com
+Content-Type: application/x-www-form-urlencoded
+
+Listelemek istediğiniz kelimenin pid değerini giriniz.
